@@ -1,0 +1,241 @@
+@prefix : <http://onto.neo4j.com/lead#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://onto.neo4j.com/lead#> .
+
+<http://onto.neo4j.com/lead#> rdf:type owl:Ontology .
+
+# Classes
+:Lead a owl:Class ;
+    rdfs:label "Lead" .
+
+:Activity a owl:Class ;
+    rdfs:label "Activity" .
+
+:Media a owl:Class ;
+    rdfs:label "Media" .
+
+:Location a owl:Class ;
+    rdfs:label "Location" .
+
+:Content a owl:Class ;
+    rdfs:label "Content" .
+
+:ConversionStatus a owl:Class ;
+    rdfs:label "Conversion Status" .
+
+:Tag a owl:Class ;
+    rdfs:label "Tag" .
+
+:LeadSource a owl:Class ;
+    rdfs:label "Lead Source" .
+
+:Occupation a owl:Class ;
+    rdfs:label "Occupation" .
+
+:Specialization a owl:Class ;
+    rdfs:label "Specialization" .
+
+:Profile a owl:Class ;
+    rdfs:label "Profile" .
+
+:ContactPreference a owl:Class ;
+    rdfs:label "Contact Preference" .
+
+:LeadQuality a owl:Class ;
+    rdfs:label "Lead Quality" .
+
+:LeadProfile a owl:Class ;
+    rdfs:label "Lead Profile" .
+
+:LastActivity a owl:Class ;
+    rdfs:label "Last Activity" .
+
+# Data Properties (Attributes)
+:prospectID a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:string ;
+    rdfs:label "Prospect ID" .
+
+:leadNumber a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:int ;
+    rdfs:label "Lead Number" .
+
+:leadOrigin a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:string ;
+    rdfs:label "Lead Origin" .
+
+:leadSource a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:string ;
+    rdfs:label "Lead Source" .
+
+:doNotEmail a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Do Not Email" .
+
+:doNotCall a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Do Not Call" .
+
+:converted a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Converted" .
+
+:totalVisits a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:int ;
+    rdfs:label "Total Visits" .
+
+:totalTimeSpentOnWebsite a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:float ;
+    rdfs:label "Total Time Spent on Website" .
+
+:pageViewsPerVisit a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:float ;
+    rdfs:label "Page Views Per Visit" .
+
+:lastActivity a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:string ;
+    rdfs:label "Last Activity" .
+
+:country a owl:DatatypeProperty ;
+    rdfs:domain :Location ;
+    rdfs:range xsd:string ;
+    rdfs:label "Country" .
+
+:city a owl:DatatypeProperty ;
+    rdfs:domain :Location ;
+    rdfs:range xsd:string ;
+    rdfs:label "City" .
+
+:specialization a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:string ;
+    rdfs:label "Specialization" .
+
+:howDidYouHear a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:string ;
+    rdfs:label "How Did You Hear" .
+
+:currentOccupation a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:string ;
+    rdfs:label "Current Occupation" .
+
+:whatMattersMostToYou a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:string ;
+    rdfs:label "What Matters Most To You" .
+
+:search a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Search" .
+
+:magazine a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Magazine" .
+
+:newspaperArticle a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Newspaper Article" .
+
+:xEducationForums a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "X Education Forums" .
+
+:newspaper a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Newspaper" .
+
+:digitalAdvertisement a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Digital Advertisement" .
+
+:throughRecommendations a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Through Recommendations" .
+
+:receiveMoreUpdatesAboutOurCourses a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Receive More Updates About Our Courses" .
+
+:tags a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:string ;
+    rdfs:label "Tags" .
+
+:leadQuality a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:string ;
+    rdfs:label "Lead Quality" .
+
+:updateMeOnSupplyChainContent a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Update Me On Supply Chain Content" .
+
+:getUpdatesOnDMContent a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Get Updates On DM Content" .
+
+:leadProfile a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:string ;
+    rdfs:label "Lead Profile" .
+
+:asymmetriqueActivityIndex a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:float ;
+    rdfs:label "Asymmetrique Activity Index" .
+
+:asymmetriqueProfileIndex a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:float ;
+    rdfs:label "Asymmetrique Profile Index" .
+
+:asymmetriqueActivityScore a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:float ;
+    rdfs:label "Asymmetrique Activity Score" .
+
+:asymmetriqueProfileScore a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:float ;
+    rdfs:label "Asymmetrique Profile Score" .
+
+:agreeToPayAmountThroughCheque a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Agree to Pay Amount Through Cheque" .
+
+:freeCopyOfMasteringTheInterview a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "Free Copy of Mastering The Interview" .
+
+:lastNotableActivity a owl:DatatypeProperty ;
+    rdfs:domain :Lead ;
+    rdfs:range xsd:string ;
+    rdfs:label "Last Notable Activity" .
